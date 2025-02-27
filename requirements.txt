@@ -1,0 +1,5 @@
+psutil
+mysql-connector-python
+dash
+pandas
+plotly

@@ -1,0 +1,14 @@
+# Ignore temporary files
+temp-plot.html
+task.py
+task2.py
+notes.txt
+
+# Ignore environment-specific files
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3

@@ -1,31 +1,76 @@
 # Resource Tracking System
 
-## Description
-This project monitors CPU usage, visualizes data through interactive graphs, and provides a web-based dashboard for resource tracking. It integrates with a MySQL database for data storage and retrieval.
+## DESCRIPTION
+This project is a small-scale system monitoring tool that tracks CPU usage using
+Python’s psutil library, stores it in a MySQL database, and visualizes it on a real-time dashboard built using Dash and Plotly. It helps us understand how to combine backend data collection, storage, and frontend visualization — all in Python.
 
-## Features
-- Monitors CPU usage and sends email alerts.
-- Generates interactive graphs using Plotly.
-- Provides a Dash-based web dashboard for data visualization.
-- Includes user management for registration and login.
+## DIRECTORY STRUCTURE
+resource_tracking/
+├── cpu_usage_alert.py
+├── dash_app.py
+├── graph_data.py
+├── notes.txt
+├── task.py
+├── task2.py
+├── temp-plot.html
+├── testing.py
+└── __pycache__/
+└── email.cpython-312.pyc
 
-## Installation
+## OVERVIEW
+Language    Python
+DB          MySQL
+Libs        psutil, mysql.connector, dash, plotly, pandas, smtplib, email
+Dashboard   Dash (a python web framework for interactive dashboards)
+
+## FEATURES
+- 📊 **Real-time CPU usage tracking**
+- ⚠️ **Automatic alerting** when CPU crosses a threshold
+- 📈 **Interactive dashboard** built with Dash (Plotly)
+- 🧠 **Background tasks** to log and process system data
+- 🧩 **Modular code structure** — easy to extend and learn from
+
+## INSTALLATION and SETUP
+bash
+git clone https://github.com/sharvari257/resource-tracking-system.git
+cd resource_tracking
+
+create virtual environment
+python -m venv venv
+source venv/bin/activate      # (Mac/Linux)
+venv\Scripts\activate         # (Windows)
+
 To install the required libraries, run:
-```bash
+```
 pip install -r requirements.txt
 ```
 
-## Usage
-1. Run `cpu_usage_alert.py` to start monitoring CPU usage.
-2. Launch the Dash application by running `dash_app.py`.
+## HOW IT WORKS
+1. cpu_usage_alert.py continuously checks CPU metrics.
+2. When a threshold is crossed, it triggers a warning or logs the event.
+3. graph_data.py formats collected data for display.
+4. dash_app.py renders a dashboard (via Dash/Plotly) that updates in real-time.
+5. Background scripts (task.py, task2.py) handle logging or periodic updates.
 
-## Contributing
+## EXAMPLE OUTPUT
+CPU Usage Alert Example:
+```Warning! CPU usage exceeded 85% at 12:45:20```
+
+Dashboard Example:
+* Displays CPU usage graph updating in real-time
+* Highlights alert regions or spikes visually
+
+## CONTRIBUTING
 1. Fork the repository.
 2. Create a new branch for your feature.
 3. Submit a pull request.
 
-## License
-MIT License
+## AUTHOR
+**Sharvari Phatkar**
+Technical Consultant Engineering Apprentice @ Splunk AppDynamics - Cisco [Now full time]
+🎓 B.E. in Computer Technology | PG-Diploma in Cloud Technology
+💡 Interests: Linux, Cloud, Containers, Monitoring, and DevOps Tools
+
 
 ## Acknowledgments
 - [Plotly](https://plotly.com/) for data visualization.

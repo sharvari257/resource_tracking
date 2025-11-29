@@ -6,13 +6,13 @@ Python’s psutil library, stores it in a MySQL database, and visualizes it on a
 
 ## DIRECTORY STRUCTURE
 resource_tracking/
-  cpu_usage_alert.py
-  dash_app.py
-  graph_data.py
-  temp-plot.html
-  testing.py
-  __pycache__/
-  email.cpython-312.pyc
+ - cpu_usage_alert.py
+ - dash_app.py
+ - graph_data.py
+ - temp-plot.html
+ - testing.py
+ - __pycache__/
+ - email.cpython-312.pyc
 
 ## OVERVIEW
 Language    Python
